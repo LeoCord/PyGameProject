@@ -1,12 +1,10 @@
 import pygame
 import random
 
-# Определяем размеры
 WIDTH, HEIGHT = 300, 600
 BLOCK_SIZE = 25
 SCORE_PANEL_WIDTH = 100
-
-# Определяем цвета
+а
 RED = (255, 0, 0)
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -22,7 +20,6 @@ COLORS = [
 ]
 DROP_INTERVAL = 100
 
-# Форма тетромино
 SHAPES = [
     [[1, 1, 1], [0, 1, 0]],  # T
     [[1, 1], [1, 1]],  # O
@@ -198,7 +195,7 @@ def show_game_over_screen(screen):
             if event.type == pygame.QUIT:
                 waiting = False
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_ESCAPE:  # Выход по нажатию ESC
+                if event.key == pygame.K_ESCAPE:
                     waiting = False
 
 
@@ -277,7 +274,7 @@ def main():
                 if not tetris.valid_move():
                     tetris.rotate_piece()
 
-        keys = pygame.key.get_pressed()  # Получаем состояние всех клавиш
+        keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT]:
             tetris.current_piece['x'] -= 1
             if not tetris.valid_move():
@@ -293,7 +290,7 @@ def main():
                 tetris.move_sound.play()
 
         if keys[pygame.K_DOWN]:
-            tetris.drop()  # Можно оставить так, чтобы фигурка падала быстрее при нажатии вниз
+            tetris.drop()
 
         draw_board(screen, tetris.board)
 
