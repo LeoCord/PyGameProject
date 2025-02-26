@@ -4,7 +4,6 @@ import random
 WIDTH, HEIGHT = 300, 600
 BLOCK_SIZE = 25
 SCORE_PANEL_WIDTH = 100
-а
 RED = (255, 0, 0)
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
